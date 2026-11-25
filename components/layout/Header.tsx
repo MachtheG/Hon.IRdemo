@@ -52,7 +52,7 @@ export function Header({ locale, t }: { locale: string; t: Dict }) {
                 </span>
               </Link>
               <span aria-hidden className="mx-1 h-9 w-px flex-none bg-rule" />
-              <UdaEmblem height={40} label={t.nav.udaLink} />
+              <UdaEmblem height={52} label={t.nav.udaLink} />
             </div>
             <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
               {links.map((l) => (
