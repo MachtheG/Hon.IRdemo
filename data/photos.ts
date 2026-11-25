@@ -20,7 +20,15 @@ const CC0 = { name: "CC0 1.0", url: "https://creativecommons.org/publicdomain/ze
 const commons = (file: string) => `https://commons.wikimedia.org/wiki/File:${file}`;
 
 export const himPhotos: Photo[] = [
-  // Populated from ./photos/him/ — see scripts/photos.mjs output.
+  // Supplied by the campaign (photos/him/). Small sources (≤678px) — request originals; see PHOTO_SHOTLIST.md.
+  // Place/year unknown: captions are generic and tagged demo until the campaign confirms them.
+  { id: "ir-4", kind: "him", src: "/images/him/ir-4.jpg", focalX: 37, focalY: 40, alt: "Isaac Ruto waving to a large crowd of supporters at an outdoor rally", caption: "Isaac Ruto greets supporters at a rally", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-1", kind: "him", src: "/images/him/ir-1.jpg", focalX: 50, focalY: 38, alt: "Portrait of Isaac Ruto in a navy suit and blue tie", caption: "Isaac Ruto, official portrait", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-3", kind: "him", src: "/images/him/ir-3.jpg", focalX: 58, focalY: 40, alt: "Isaac Ruto smiling, wearing a beige jacket and checked shirt", caption: "Isaac Ruto", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-2", kind: "him", src: "/images/him/ir-2.jpg", focalX: 50, focalY: 42, alt: "Isaac Ruto smiling at a microphone during a formal hearing", caption: "Isaac Ruto at a formal hearing", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-7", kind: "him", src: "/images/him/ir-7.jpg", focalX: 50, focalY: 25, alt: "Isaac Ruto speaking at a microphone in a dark suit", caption: "Isaac Ruto addresses an event", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-5", kind: "him", src: "/images/him/ir-5.jpg", focalX: 35, focalY: 30, alt: "Campaign poster: Hon. Isaac Ruto for Governor, Bomet County 2027", caption: "Campaign poster, Bomet 2027", credit: "Isaac Ruto 2027 campaign", demo: true },
+  { id: "ir-6", kind: "him", src: "/images/him/ir-6.jpg", focalX: 70, focalY: 40, alt: "Isaac Ruto in conversation with another official outdoors", caption: "Isaac Ruto in conversation", credit: "Isaac Ruto 2027 campaign", demo: true },
 ];
 
 export const stockPhotos: Photo[] = [
@@ -174,30 +182,30 @@ const s = (key: string, page: string, want: Slot["want"], photoId: string | null
 
 export const slots: Slot[] = [
   // Home
-  s("hero", "/", "him", "tea-sotik", "Hero portrait — head and shoulders, looking at camera", "Vertical or 4:5, eyes on upper third, plain soft background, natural light. ≥2400px long edge.", "plain", 2400),
-  s("seal", "all (header/footer)", "him", null, "Circular portrait seal (48px header, footer)", "Tight head crop, centred face, 1:1.", "plain", 800),
-  s("og", "social share", "him", null, "OG image portrait (1200×630)", "Head and shoulders with room on the right for the name.", "plain", H),
-  s("home-story", "/", "him", "bomet-rainbow", "Him at work in the county office or with residents", "4:5 portrait, warm, mid-shot.", "feature"),
+  s("hero", "/", "him", "ir-4", "Hero portrait — head and shoulders, looking at camera", "Vertical or 4:5, eyes on upper third, plain soft background, natural light. ≥2400px long edge.", "plain", 2400),
+  s("seal", "all (header/footer)", "him", "ir-1", "Circular portrait seal (48px header, footer)", "Tight head crop, centred face, 1:1.", "plain", 800),
+  s("og", "social share", "him", "ir-1", "OG image portrait (1200×630)", "Head and shoulders with room on the right for the name.", "plain", H),
+  s("home-story", "/", "him", "ir-3", "Him at work in the county office or with residents", "4:5 portrait, warm, mid-shot.", "feature"),
   s("ledger-health", "/", "him", "dispensary", "Him at Longisa County Referral Hospital (renal/eye/ICU units)", "3:2 landscape at the facility. Stock stand-in until supplied."),
   s("ledger-water", "/", "him", "water-tap", "Him at the Chebunyo water kiosk or market", "3:2 landscape. Stock stand-in until supplied."),
   s("ledger-education", "/", "him", "kericho-tea-17", "Him at an ECDE centre with teachers", "3:2 landscape. No identifiable children without written consent."),
   s("ledger-agri", "/", "him", "dairy-bomet", "Him at a milk cooling plant / co-op", "3:2 landscape. Stock stand-in until supplied."),
-  s("ledger-devolution", "/", "him", "kericho-landscape", "Him as Council of Governors chair (2013–15)", "3:2 landscape, official setting."),
-  s("ledger-justice", "/", "him", "tea-farm-kenya", "Him at a JSC sitting or court opening", "3:2 landscape. Check JSC permission before use."),
-  s("devolution", "/", "him", "kericho-tea-08", "Him addressing governors / Pesa Mashinani event", "4:5 portrait or 3:2; dark-band friendly."),
-  s("jsc-portrait", "/ and /record#jsc", "him", "kericho-tea-09", "Him at the Dagoretti Law Courts opening (quote photo)", "4:5 portrait. Legal sign-off required."),
-  s("plan-portrait", "/", "him", "tea-small-scale", "Him listening to farmers in a ward meeting", "3:2 landscape, grassroots feel."),
-  s("pledge-portrait", "/ and /get-involved", "him", "kericho-tea-21", "Him greeting voters (smiling, approachable)", "4:5 portrait."),
+  s("ledger-devolution", "/", "him", "ir-6", "Him as Council of Governors chair (2013–15)", "3:2 landscape, official setting."),
+  s("ledger-justice", "/", "him", "ir-2", "Him at a JSC sitting or court opening", "3:2 landscape. Check JSC permission before use."),
+  s("devolution", "/", "him", "ir-7", "Him addressing governors / Pesa Mashinani event", "4:5 portrait or 3:2; dark-band friendly."),
+  s("jsc-portrait", "/ and /record#jsc", "him", "ir-2", "Him at the Dagoretti Law Courts opening (quote photo)", "4:5 portrait. Legal sign-off required."),
+  s("plan-portrait", "/", "him", "ir-4", "Him listening to farmers in a ward meeting", "3:2 landscape, grassroots feel."),
+  s("pledge-portrait", "/ and /get-involved", "him", "ir-5", "Him greeting voters (smiling, approachable)", "4:5 portrait."),
   s("pledge-bg", "/", "scene", "tea-bomet", "Background scene for the pledge band", "Wide landscape, Bomet tea country.", "plain"),
   // Story
-  s("story-hero", "/story", "him", "tea-bomet", "Portrait for the story opener", "4:5 portrait, reflective.", "feature", 2400),
+  s("story-hero", "/story", "him", "ir-1", "Portrait for the story opener", "4:5 portrait, reflective.", "feature", 2400),
   s("story-tumoi", "/story", "scene", "bomet-rainbow", "Home ground: Sigor / Chepalungu landscape", "Wide landscape of Chepalungu.", "plain"),
-  s("story-mp", "/story", "him", "kericho-tea-03", "Him as MP for Chepalungu (1998–2012)", "Archive photo, any ratio."),
-  s("story-governor", "/story", "him", "rural-road", "Swearing-in as first Governor, March 2013", "Archive photo, 3:2."),
+  s("story-mp", "/story", "him", "ir-2", "Him as MP for Chepalungu (1998–2012)", "Archive photo, any ratio."),
+  s("story-governor", "/story", "him", "ir-3", "Swearing-in as first Governor, March 2013", "Archive photo, 3:2."),
   s("story-family", "/story", "him", "kericho-tea-06", "Family photo (CONFIRM with campaign)", "Only with family consent."),
   s("story-tea", "/story", "scene", "kericho-tea-21", "South Rift tea country", "Wide landscape.", "plain"),
   // Record
-  s("record-hero", "/record", "him", "kericho-tea-17", "Him in his Governor's office", "3:2 landscape."),
+  s("record-hero", "/record", "him", "ir-7", "Him in his Governor's office", "3:2 landscape."),
   s("record-water", "/record", "scene", "water-tank", "Water — scene", "Landscape.", "plain"),
   s("record-agri", "/record", "scene", "kericho-tea-06", "Tea and dairy — scene", "Landscape.", "plain"),
   s("record-health", "/record", "him", "dispensary", "Him at the Longisa eye unit commissioning", "3:2 landscape."),
@@ -208,7 +216,7 @@ export const slots: Slot[] = [
   s("plan-4", "/plan", "scene", "kericho-tea-08", "Promise 04 — Children and youth first (ECDE classroom)", "Landscape; no identifiable children without consent.", "plain"),
   s("plan-5", "/plan", "scene", "market", "Promise 05 — Roads, markets and jobs", "Landscape.", "plain"),
   // Get involved
-  s("gi-hero", "/get-involved", "him", "market", "Him with volunteers / campaign team", "3:2 landscape, energetic."),
+  s("gi-hero", "/get-involved", "him", "ir-4", "Him with volunteers / campaign team", "3:2 landscape, energetic."),
 ];
 
 /** Gallery: 24 slots. 10 reserved for his photos, 14 stock scenes (clearly captioned). */
@@ -216,7 +224,7 @@ const galleryStock = [
   "tea-bomet", "dairy-bomet", "tea-sotik", "kericho-tea-03", "bomet-rainbow", "kericho-tea-09", "market",
   "kericho-landscape", "tea-small-scale", "water-tank", "kericho-tea-21", "tea-farm-kenya", "rural-road", "kericho-tea-06",
 ];
-const galleryFill = ["kericho-tea-08", "kericho-tea-17", "bomet-rainbow", "water-tap", "dispensary", "rainwater", "tea-small-scale", "kericho-tea-06", "water-tank", "kericho-tea-21"];
+const galleryFill = ["ir-4", "ir-1", "ir-3", "ir-2", "ir-7", "ir-5", "ir-6", "kericho-tea-06", "water-tank", "kericho-tea-21"];
 const galleryHim = [
   "Him with tea farmers at a buying centre", "Him at a ward public participation forum", "Him at Bomet Green Stadium",
   "Him opening a milk cooling plant", "Him at an ECDE centre", "Him with the Council of Governors",
