@@ -1,0 +1,37 @@
+{
+  "name": "isaac-ruto-2027",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "predev": "node scripts/photos.mjs",
+    "prebuild": "node scripts/photos.mjs && node scripts/check-demo.mjs && node scripts/reports.mjs",
+    "build": "next build",
+    "start": "next start",
+    "photos": "node scripts/photos.mjs",
+    "reports": "node scripts/reports.mjs",
+    "check-demo": "node scripts/check-demo.mjs",
+    "sample-logo": "node scripts/sample-logo.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "5.6.2",
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.13",
+    "@types/node": "22.18.6",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "mapshaper": "0.6.113",
+    "sharp": "0.34.4",
+    "tailwindcss": "4.1.13",
+    "typescript": "5.9.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  }
+}
